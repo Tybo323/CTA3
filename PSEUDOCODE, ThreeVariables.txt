@@ -1,0 +1,33 @@
+START
+    DECLARE var1, var2, var3 as integer
+
+    // Prompt user for three integer values
+    OUTPUT "Enter three integer values:"
+    INPUT var1, var2, var3
+
+    // Create integer pointers to dynamic memory
+    DECLARE ptr1, ptr2, ptr3 as pointers to integer
+    ALLOCATE memory for ptr1, ptr2, ptr3
+
+    // Store values in dynamic memory
+    ASSIGN var1 to memory location pointed by ptr1
+    ASSIGN var2 to memory location pointed by ptr2
+    ASSIGN var3 to memory location pointed by ptr3
+
+    // Display contents of the variables and pointers
+    OUTPUT "Variable values:"
+    OUTPUT var1, var2, var3
+
+    OUTPUT "Pointer values:"
+    OUTPUT value at memory location pointed by ptr1
+    OUTPUT value at memory location pointed by ptr2
+    OUTPUT value at memory location pointed by ptr3
+
+    OUTPUT "Pointer addresses:"
+    OUTPUT address of ptr1
+    OUTPUT address of ptr2
+    OUTPUT address of ptr3
+
+    // Deallocate memory
+    DEALLOCATE memory for ptr1, ptr2, ptr3
+END
